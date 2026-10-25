@@ -36,6 +36,10 @@ requested. Keep port 8000 on your trusted LAN/VPN: the upstream server is design
 for a home network and most endpoints are unauthenticated. The admin password
 does not add authentication to every endpoint.
 
+If you access Home Assistant through a public hostname or reverse proxy, the
+Open Web UI button may use that hostname. Use the Yellow's **LAN IP** with port
+8000 for the openCook app; adding this repository does not publish that port.
+
 Data lives in `/data/opencook` inside the add-on: SQLite database, recipe images
 and server-created backups. It persists across add-on restarts and updates and is
 included when you select this add-on in a Home Assistant backup. Make a backup

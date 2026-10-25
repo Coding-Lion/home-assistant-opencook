@@ -14,14 +14,23 @@ Home Assistant Core 2026.10.3:
   without a model server, and verified `/health` returned `{"status":"ok"}` and
   `/admin` returned HTTP 200. Stopped the temporary server after verification.
 
-The add-on image has **not yet been built or run locally**: this machine has no
-working Docker engine. The repository includes CI builds and container smoke tests
-for `linux/amd64` and `linux/arm64`; those results are pending publication/running
-the workflow. Local schema checks validate option mapping, not Supervisor itself.
+Published [release v0.1.0](https://github.com/Coding-Lion/home-assistant-opencook/releases/tag/v0.1.0).
+The [release-code CI run](https://github.com/Coding-Lion/home-assistant-opencook/actions/runs/40199130184)
+passed all five jobs: tests, hassfest, HACS validation, and container build/smoke
+tests on both `linux/amd64` and `linux/arm64`. The container smoke tests verify
+startup, health, household creation, the service UID and persistence across restart.
 
-A first install on the Home Assistant Yellow is still required. GitHub publishing
-needs authentication, and HA installation needs the instance URL and access.
-Until publication, use the local ZIP packages and the README's local-install steps.
+On Home Assistant Yellow / CM4 with Core 2026.10.2:
 
-Compatibility before Core 2026.10.3 is based on the documented APIs and the
+- Supervisor accepted the repository and built/installed the server app.
+- The server started with the configured admin password and advertised its mDNS
+  service. The health check returned HTTP 200, with no vision server running.
+- A new household was created successfully.
+- The integration was downloaded through HACS and all component files were verified.
+- Home Assistant's configuration check completed successfully before restarting.
+- After the restart, the integration configured successfully for the new household.
+- The native To-do interface displayed the connected `todo.home_shopping_list`
+  entity, ready for use with an empty list.
+
+Compatibility before Core 2026.10.2 is based on the documented APIs and the
 Voluptuous fallback; the full suite has not been run on every older HA release.
