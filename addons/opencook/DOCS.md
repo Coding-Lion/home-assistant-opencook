@@ -31,13 +31,14 @@ The existing vision client can also use OpenRouter's OpenAI-compatible API:
 
 ```yaml
 vision_base_url: https://openrouter.ai/api/v1
-vision_model: google/gemini-2.5-flash
+vision_model: google/gemini-3.8-flash
 vision_api_key: YOUR_OPENROUTER_API_KEY
 ```
 
 Enter the real key directly in the app's Configuration tab, save, and restart the
 app. Do not put a real key in this repository. The selected model must accept
-images and support JSON responses; the example model supports both. Scanning
+images and support JSON responses; the example model supports both (checked in
+OpenRouter's catalog on 2026-10-25). Scanning
 sends recipe photos to OpenRouter and the selected model provider and uses your
 OpenRouter credits. Ollama is not needed. The shopping-list integration continues
 to connect to your local openCook server.

@@ -35,6 +35,10 @@ On Home Assistant Yellow / CM4 with Core 2026.10.2:
   `google/gemini-2.5-flash`. The saved key authenticated successfully against
   OpenRouter's `GET /api/v1/key` endpoint (HTTP 200), with no model inference call
   or recipe-photo upload. Server health and shopping-list sync remained HTTP 200.
+- On 2026-10-25 the configured vision model was changed to
+  `google/gemini-3.8-flash` after checking current vision capabilities and pricing.
+  The saved setting and clean server restart were verified; health and household
+  sync returned HTTP 200. This model-selection check did not run billed inference.
 
 Compatibility before Core 2026.10.2 is based on the documented APIs and the
 Voluptuous fallback; the full suite has not been run on every older HA release.
