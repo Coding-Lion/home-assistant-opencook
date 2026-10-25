@@ -1,0 +1,12 @@
+{
+  "domain": "opencook",
+  "name": "openCook",
+  "codeowners": ["@coding-lion"],
+  "config_flow": true,
+  "documentation": "https://github.com/coding-lion/home-assistant-opencook",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/coding-lion/home-assistant-opencook/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

@@ -1,0 +1,11 @@
+.venv*/
+upstream/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+.coverage
+htmlcov/
+dist/
+.test-data/
+.tools/

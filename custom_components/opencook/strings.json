@@ -1,0 +1,32 @@
+{
+  "title": "openCook",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to openCook",
+        "description": "Enter the server URL and your household invite code from openCook. The invite code is the shared sync credential, not the household join PIN or admin password. Your household must already exist on this server.",
+        "data": {"url": "Server URL", "household_code": "Household invite code"}
+      },
+      "reconfigure": {
+        "title": "Reconnect openCook",
+        "description": "Update the server URL or household invite code.",
+        "data": {"url": "Server URL", "household_code": "Household invite code"}
+      },
+      "reauth_confirm": {
+        "title": "Reconnect openCook",
+        "description": "The server rejected the saved household invite code. Enter the current URL and code.",
+        "data": {"url": "Server URL", "household_code": "Household invite code"}
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to a compatible openCook server. Check the URL, server logs and network connection.",
+      "invalid_auth": "The household invite code was rejected. Use the invite code, not the join PIN or admin password.",
+      "invalid_url": "Enter a full http:// or https:// URL, without embedded credentials, query parameters or a fragment."
+    },
+    "abort": {
+      "already_configured": "This household is already configured.",
+      "reconfigure_successful": "openCook connection updated.",
+      "reauth_successful": "openCook connection updated."
+    }
+  }
+}

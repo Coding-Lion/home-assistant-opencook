@@ -1,0 +1,32 @@
+{
+  "title": "openCook",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Mit openCook verbinden",
+        "description": "Gib die Server-URL und den Einladungscode deines openCook-Haushalts ein. Der Einladungscode ist weder die Beitritts-PIN noch das Admin-Passwort. Der Haushalt muss bereits auf diesem Server existieren.",
+        "data": {"url": "Server-URL", "household_code": "Einladungscode des Haushalts"}
+      },
+      "reconfigure": {
+        "title": "openCook neu verbinden",
+        "description": "Aktualisiere die Server-URL oder den Einladungscode.",
+        "data": {"url": "Server-URL", "household_code": "Einladungscode des Haushalts"}
+      },
+      "reauth_confirm": {
+        "title": "openCook neu verbinden",
+        "description": "Der Server hat den gespeicherten Einladungscode abgelehnt. Gib die aktuelle URL und den Code ein.",
+        "data": {"url": "Server-URL", "household_code": "Einladungscode des Haushalts"}
+      }
+    },
+    "error": {
+      "cannot_connect": "Keine Verbindung zu einem kompatiblen openCook-Server. Prüfe URL, Serverprotokoll und Netzwerk.",
+      "invalid_auth": "Der Einladungscode wurde abgelehnt. Verwende den Einladungscode, nicht die PIN oder das Admin-Passwort.",
+      "invalid_url": "Gib eine vollständige http://- oder https://-URL ohne Zugangsdaten, Abfrageparameter oder Fragment ein."
+    },
+    "abort": {
+      "already_configured": "Dieser Haushalt ist bereits eingerichtet.",
+      "reconfigure_successful": "openCook-Verbindung aktualisiert.",
+      "reauth_successful": "openCook-Verbindung aktualisiert."
+    }
+  }
+}
