@@ -10,7 +10,7 @@ startup: application
 boot: auto
 init: true
 host_network: true
-webui: http://[HOST]:8000/admin
+webui: http://[HOST]:[PORT:8000]/admin
 options:
   server_name: openCook
   admin_password: ""

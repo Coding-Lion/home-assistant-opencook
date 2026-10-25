@@ -2,6 +2,7 @@
 
 import importlib.util
 import json
+import re
 from pathlib import Path
 
 import yaml
@@ -26,6 +27,8 @@ def test_supervisor_options_are_all_mapped_and_secrets_are_optional():
     assert environment["OPENCOOK_PORT"] == "8000"
     assert config["host_network"]
     assert "aarch64" in config["arch"]
+    # Supervisor requires template syntax even for a fixed host-network port.
+    assert re.fullmatch(r"http://\[HOST\]:\[PORT:8000\]/admin", config["webui"])
 
 
 def test_hacs_manifest_and_translations():

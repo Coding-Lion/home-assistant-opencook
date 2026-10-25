@@ -6,3 +6,4 @@
 - Persistent database, images and backups under `/data/opencook`.
 - Configure an external vision endpoint and bootstrap the admin password.
 - Advertise the server to Android clients using mDNS on the host network.
+- Use Supervisor's required port placeholder for the web UI link.
